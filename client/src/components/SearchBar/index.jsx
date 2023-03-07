@@ -7,8 +7,7 @@ export const SearchBar = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const value = e.target.input.value;
-    console.log(value);
-    // setSearch
+    setSearch(value)
   };
 
   return (
