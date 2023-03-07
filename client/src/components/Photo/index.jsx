@@ -26,11 +26,11 @@ export const Photo = ({ url, name, date = "Tue Mar 07 2023 18:40:51 GMT-0300" },
           <GiChainedHeart />
         </button>
       </div>
-      <ul>
+      {/* <ul>
         {tags.map((tag) => (
           <span>{tag}</span>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 };

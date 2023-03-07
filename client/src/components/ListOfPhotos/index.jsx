@@ -1,7 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Photo } from "../Photo";
 
-export const ListOfPhotos = () => {
+export const ListOfPhotos = ({ pictures }) => {
   return (
-    <div>ListOfPhotos</div>
-  )
-}
+    <ul>
+      {pictures.map((pic) => (
+        <Photo {...pic} tags={["dogs", "cat", "buildings"]} />
+      ))}
+    </ul>
+  );
+};
