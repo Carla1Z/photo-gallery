@@ -12,11 +12,13 @@ export const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
-      | <input type="text" placeholder="Search some photos..." name="input" />
-      <button type="submit">
-        <BiSearchAlt />
-      </button>
-    </form>
+    <header>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        | <input type="text" placeholder="Search some photos..." name="input" />
+        <button type="submit">
+          <BiSearchAlt />
+        </button>
+      </form>
+    </header>
   );
 };
