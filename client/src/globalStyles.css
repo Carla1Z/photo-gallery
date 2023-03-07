@@ -5,10 +5,11 @@
 }
 
 html {
-  font-size: 6205%;
+  font-size: 62.5%;
 }
 
 body {
   font-family: sans-serif;
   font-size: 1.8rem;
+  background-color: lightcyan;
 }
