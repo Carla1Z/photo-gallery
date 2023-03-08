@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { Photo } from "../Photo";
 
 export const UploadPhoto = () => {
+  const [imgData, setImgData] = useState();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -15,13 +18,26 @@ export const UploadPhoto = () => {
       body: formData,
     })
       .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        console.log(data);
+        setImgData(data);
+      });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="file" name="imgToUpload" />
-      <button type="submit">Enviar</button>
-    </form>
+    <>
+      <form onSubmit={handleSubmit}>
+        <input type="file" name="imgToUpload" />
+        <button type="submit">Enviar</button>
+      </form>
+      {imgData && (
+        <Photo
+          url={imgData.url}
+          date={imgData.created_at}
+          tags={imgData.tags}
+          name={imgData.public_id}
+        />
+      )}
+    </>
   );
 };
