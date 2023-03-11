@@ -9,8 +9,6 @@ export const UploadPhoto = () => {
     const formData = new FormData();
     const img = e.target.imgToUpload.files[0];
     formData.append("file", img);
-    formData.append("tags", ["tractor"]);
-    formData.append("public_id", "fancy_tractor");
     formData.append("cloud_name", "dzwzqaesj");
     formData.append("upload_preset", "PhotoGallery");
     fetch("https://api.cloudinary.com/v1_1/dzwzqaesj/image/upload", {

@@ -2,9 +2,8 @@ import React from "react";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { GiChainedHeart } from "react-icons/gi";
 
-export const Photo = ({ url, name, date = "Tue Mar 07 2023 18:40:51 GMT-0300", tags }) => {
+export const Photo = ({ url, name, date, tags }) => {
   const photoDate = new Date(date);
-
   const addToFav = () => {
     console.log("Add to favorites");
   }
@@ -28,7 +27,7 @@ export const Photo = ({ url, name, date = "Tue Mar 07 2023 18:40:51 GMT-0300", t
       </div>
       <ul>
         {tags.map((tag) => (
-          <span>{tag}</span>
+          <span key={tag}>{tag}</span>
         ))}
       </ul>
     </div>
