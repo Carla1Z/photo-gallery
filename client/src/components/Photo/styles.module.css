@@ -1,0 +1,55 @@
+.photo {
+  margin-bottom: 2rem;
+  border-radius: 25px;
+  width: 30rem;
+  min-height: 20rem;
+  padding: 1.3rem 2rem;
+  background-color: #bde0fe;
+  border: 1px solid #a2d2ff;
+}
+
+.image {
+  border-radius: inherit;
+  width: 95%;
+  min-height: 75%;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #023047;
+}
+
+.date {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 500;
+  padding: 0.2rem 0.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons button {
+  background: none;
+  color: #023047;
+  border-radius: 50px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.buttons button:hover {
+  transform: scale(1.3);
+}
+
+.favorite:focus {
+  color: #e63946;
+}

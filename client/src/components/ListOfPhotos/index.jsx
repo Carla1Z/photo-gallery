@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Photo } from "../Photo";
+import styles from "./styles.module.css";
 
 export const ListOfPhotos = () => {
   const [imgs, setImgs] = useState([]);
@@ -14,7 +15,7 @@ export const ListOfPhotos = () => {
   }, []);
 
   return (
-    <ul>
+    <ul className={styles.list}>
       {imgs.length > 0 ? (
         imgs.map((img) => (
           <Photo
