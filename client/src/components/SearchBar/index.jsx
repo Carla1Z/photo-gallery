@@ -14,7 +14,7 @@ export const SearchBar = () => {
   return (
     <header>
       <form onSubmit={handleSubmit} className={styles.form}>
-        | <input type="text" placeholder="Search some photos..." name="input" />
+        <input type="text" placeholder="Search some photos..." name="input" />
         <button type="submit">
           <BiSearchAlt />
         </button>
